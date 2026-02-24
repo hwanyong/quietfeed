@@ -11,6 +11,10 @@
 - 🔀 **Enable/Disable toggle** — instantly see the original Threads UI
 - 🌐 **Multi-language** — English, Korean, Japanese support
 
+<p align="center">
+  <img src="docs/screenshot-popup.png" alt="QuietFeed Popup UI" width="320">
+</p>
+
 ---
 
 ## Installation
@@ -19,7 +23,7 @@
 
 1. [Download ZIP](../../archive/refs/heads/main.zip) or clone:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/quietfeed.git
+   git clone https://github.com/hwanyong/quietfeed.git
    ```
 2. Open `chrome://extensions` in Chrome
 3. Enable **Developer mode** (top-right toggle)
@@ -68,6 +72,10 @@ No manual setup required in most cases.
 ### Post Insights Panel
 
 On your own post detail pages, QuietFeed automatically collects analytics data and displays it in a side panel:
+
+<p align="center">
+  <img src="docs/screenshot-insights.png" alt="QuietFeed Insights Panel" width="720">
+</p>
 
 | Metric | Description |
 |---|---|
