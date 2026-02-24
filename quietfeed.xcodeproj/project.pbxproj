@@ -117,6 +117,7 @@
 				Resources/popup.css,
 				Resources/popup.html,
 				Resources/popup.js,
+				Resources/quietfeed.css,
 				SafariWebExtensionHandler.swift,
 			);
 			target = F83C2D4A2F4D737C00F756F6 /* quietfeed Extension (iOS) */;
@@ -132,6 +133,7 @@
 				Resources/popup.css,
 				Resources/popup.html,
 				Resources/popup.js,
+				Resources/quietfeed.css,
 				SafariWebExtensionHandler.swift,
 			);
 			target = F83C2D542F4D737C00F756F6 /* quietfeed Extension (macOS) */;

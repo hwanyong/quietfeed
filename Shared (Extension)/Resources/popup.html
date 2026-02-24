@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
     <script type="module" src="popup.js"></script>
 </head>
+
 <body>
-    <strong>Hello World!</strong>
+    <div class="header">
+        <div class="header-left">
+            <span class="logo">🤫</span>
+            <span class="title">QuietFeed</span>
+        </div>
+        <label class="toggle">
+            <input type="checkbox" id="enableToggle" checked>
+            <span class="toggle-slider"></span>
+        </label>
+    </div>
+
+    <div class="status">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">Detecting…</span>
+    </div>
+
+    <div class="info" id="profileInfo">
+        <span class="label">Profile</span>
+        <span class="value" id="profileValue">—</span>
+    </div>
+
+    <!-- Manual input (shown when no profile detected) -->
+    <div class="manual-input" id="manualInput" style="display: none;">
+        <input type="text" id="profileInput" placeholder="username" spellcheck="false">
+        <button id="saveBtn">Save</button>
+    </div>
+
+    <div class="features">
+        <div class="feature">✓ Home feed hidden</div>
+        <div class="feature">✓ Search hidden</div>
+        <div class="feature">✓ Auto-redirect to profile</div>
+    </div>
+
+    <!-- Reset button -->
+    <button class="reset-btn" id="resetBtn">Reset profile</button>
 </body>
+
 </html>

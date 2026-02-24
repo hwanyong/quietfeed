@@ -1,10 +1,10 @@
 {
     "extension_name": {
-        "message": "quietfeed",
+        "message": "QuietFeed",
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "This is quietfeed. You should tell us what your extension does here.",
+        "message": "Focus on your Threads profile. Hides the home feed and search, redirects to your profile page.",
         "description": "Description of what the extension does."
     }
 }

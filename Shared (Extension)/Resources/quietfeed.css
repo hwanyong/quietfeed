@@ -1,0 +1,33 @@
+/*
+ * QuietFeed — Threads.com Navigation Hider
+ *
+ * Hides the Home (feed) and Search buttons from the sidebar.
+ * Uses aria-label selectors (stable across React class changes)
+ * with href-based fallbacks for i18n support.
+ *
+ * All rules are disabled when body has .quietfeed-disabled class.
+ */
+
+/* ── Hide Home button ── */
+:root:not(.quietfeed-disabled) a[aria-label="Home"],
+:root:not(.quietfeed-disabled) a[aria-label="홈"],
+:root:not(.quietfeed-disabled) a[aria-label="ホーム"] {
+    display: none !important
+}
+
+/* ── Hide Search button ── */
+:root:not(.quietfeed-disabled) a[aria-label="Search"],
+:root:not(.quietfeed-disabled) a[aria-label="검색"],
+:root:not(.quietfeed-disabled) a[aria-label="検索"] {
+    display: none !important
+}
+
+/* ── Fallback: href-based selectors (language-independent) ── */
+/* Home link (exclude the Threads logo which also links to /) */
+:root:not(.quietfeed-disabled) a[href="/"][role="link"]:not([aria-label="Threads"]):not([aria-label="스레드"]) {
+    display: none !important
+}
+
+:root:not(.quietfeed-disabled) a[href="/search"][role="link"] {
+    display: none !important
+}
