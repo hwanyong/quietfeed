@@ -39,7 +39,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/quietfeed.git
+   git clone https://github.com/hwanyong/quietfeed.git
    ```
 2. Open `safari/quietfeed.xcodeproj` in Xcode
 3. Select **quietfeed (macOS)** target
