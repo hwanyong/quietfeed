@@ -1,0 +1,29 @@
+/*
+ * QuietFeed — Threads.com Navigation Hider (Chrome)
+ *
+ * Hides the Home (feed) and Search buttons from the sidebar.
+ * All rules are disabled when root has .quietfeed-disabled class.
+ */
+
+/* ── Hide Home button ── */
+:root:not(.quietfeed-disabled) a[aria-label="Home"],
+:root:not(.quietfeed-disabled) a[aria-label="홈"],
+:root:not(.quietfeed-disabled) a[aria-label="ホーム"] {
+    display: none !important
+}
+
+/* ── Hide Search button ── */
+:root:not(.quietfeed-disabled) a[aria-label="Search"],
+:root:not(.quietfeed-disabled) a[aria-label="검색"],
+:root:not(.quietfeed-disabled) a[aria-label="検索"] {
+    display: none !important
+}
+
+/* ── Fallback: href-based selectors (language-independent) ── */
+:root:not(.quietfeed-disabled) a[href="/"][role="link"]:not([aria-label="Threads"]):not([aria-label="스레드"]) {
+    display: none !important
+}
+
+:root:not(.quietfeed-disabled) a[href="/search"][role="link"] {
+    display: none !important
+}

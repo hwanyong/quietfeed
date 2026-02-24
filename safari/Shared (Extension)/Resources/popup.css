@@ -1,0 +1,221 @@
+:root {
+    color-scheme: dark;
+    --bg: #181818;
+    --surface: #242424;
+    --text: #f5f5f5;
+    --text-dim: #999;
+    --accent: #1ed760;
+    --border: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 260px;
+    padding: 16px;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 13px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ── Header ── */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+}
+
+/* ── Toggle Switch ── */
+.toggle {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #555;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.toggle input:checked+.toggle-slider {
+    background: var(--accent);
+}
+
+.toggle input:checked+.toggle-slider::before {
+    transform: translateX(16px);
+}
+
+/* ── Status ── */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #555;
+    flex-shrink: 0;
+}
+
+.dot.active {
+    background: var(--accent);
+    box-shadow: 0 0 6px var(--accent);
+}
+
+/* ── Profile Info ── */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    background: var(--surface);
+    border-radius: 8px;
+}
+
+.label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value {
+    font-weight: 600;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+    text-align: right;
+}
+
+/* ── Features ── */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.feature {
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 2px 0;
+}
+
+/* ── Manual Input ── */
+.manual-input {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.manual-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 12px;
+    font-family: inherit;
+    outline: none;
+}
+
+.manual-input input:focus {
+    border-color: var(--accent);
+}
+
+.manual-input input::placeholder {
+    color: #666;
+}
+
+.manual-input button {
+    padding: 6px 12px;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.manual-input button:hover {
+    opacity: 0.9;
+}
+
+/* ── Reset Button ── */
+.reset-btn {
+    width: 100%;
+    padding: 6px;
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    color: var(--text);
+    border-color: #555;
+}

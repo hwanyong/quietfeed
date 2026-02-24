@@ -1,0 +1,168 @@
+/*
+ * QuietFeed — Insights Panel Styles
+ *
+ * Styles for:
+ * 1. Hidden scraping mode (dialog invisible during data collection)
+ * 2. Insights panel rendered beside the post content
+ */
+
+/* ── Scraping Mode: hide dialog while collecting data ── */
+:root.quietfeed-scraping [role="dialog"],
+:root.quietfeed-scraping [role="presentation"]>div {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ── Insights Panel ── */
+#quietfeed-insights-panel {
+    position: fixed;
+    top: 80px;
+    right: 24px;
+    width: 280px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 20px;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 13px;
+    color: #f5f5f5;
+    z-index: 9999;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    animation: qf-slide-in 0.3s ease-out;
+}
+
+#quietfeed-insights-panel::-webkit-scrollbar {
+    width: 4px;
+}
+
+#quietfeed-insights-panel::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+@keyframes qf-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ── Header ── */
+.qf-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.qf-panel-icon {
+    font-size: 18px;
+}
+
+.qf-panel-title {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+}
+
+/* ── Sections ── */
+.qf-section {
+    margin-bottom: 12px;
+}
+
+.qf-section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.qf-big-number {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.qf-divider {
+    height: 1px;
+    background: #333;
+    margin: 12px 0;
+}
+
+/* ── Progress Bars ── */
+.qf-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.qf-bar-label {
+    width: 50px;
+    font-size: 12px;
+    color: #aaa;
+    flex-shrink: 0;
+}
+
+.qf-bar-track {
+    flex: 1;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.qf-bar-fill {
+    height: 100%;
+    background: #f5f5f5;
+    border-radius: 2px;
+    transition: width 0.4s ease-out;
+}
+
+.qf-bar-value {
+    width: 42px;
+    font-size: 12px;
+    color: #aaa;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* ── Metric Rows ── */
+.qf-metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 13px;
+}
+
+.qf-metric-value {
+    font-weight: 600;
+    color: #ccc;
+}
+
+/* ── Footer ── */
+.qf-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #333;
+    font-size: 10px;
+    color: #555;
+    text-align: center;
+}
+
+/* ── Mobile: hide panel below Threads' desktop breakpoint ── */
+@media (max-width: 699px) {
+    #quietfeed-insights-panel {
+        display: none !important;
+    }
+}

@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Xcode — user-specific data
+safari/quietfeed.xcodeproj/xcuserdata/
+safari/quietfeed.xcodeproj/project.xcworkspace/xcuserdata/
+safari/quietfeed.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# Xcode build output
+build/
+DerivedData/
+*.xcarchive
+
+# MCP debug tools (development only)
+.mcp-debug-tools/
